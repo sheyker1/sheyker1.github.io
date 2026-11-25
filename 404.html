@@ -1,10 +1,122 @@
 <!doctype html>
-<html lang="ru"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Страница не найдена — Андрей Глухов</title>
-<link rel="stylesheet" href="/css/styles.css">
-</head><body><main style="max-width:640px;margin:15vh auto;padding:24px">
-<h1>Страница не найдена</h1><p>Возможно, адрес изменился или в нём опечатка.</p>
-<p><a href="/">Вернуться на главную</a></p>
-</main></body></html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Страница не найдена — Андрей Глухов</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=20260929-avatar">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=20260929-avatar">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20260929-avatar">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=home-entrance-20261008-2">
+  <style>
+    .not-found {
+      display: grid;
+      grid-template-rows: 1fr auto 1fr;
+      row-gap: var(--spacing-24);
+      min-height: calc(100vh - var(--page-padding) - var(--page-padding));
+      min-height: calc(100dvh - var(--page-padding) - var(--page-padding));
+      padding-block-end: var(--spacing-40);
+    }
+
+    .not-found .header {
+      align-self: start;
+      margin-bottom: 0;
+    }
+
+    .not-found__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .not-found__code {
+      margin-bottom: var(--spacing-40);
+      padding: var(--spacing-8) var(--spacing-16);
+      border: 1px solid var(--color-border-secondary);
+      border-radius: var(--radius-pill);
+      color: var(--color-text-secondary);
+      font-size: 1rem;
+      font-weight: var(--font-weight-medium);
+    }
+
+    @media (min-width: 768px) {
+      .not-found {
+        padding-block-end: var(--spacing-60);
+      }
+
+      .not-found__code {
+        font-size: 1.125rem;
+      }
+    }
+
+    .not-found__content .hero__title {
+      margin-bottom: var(--spacing-16);
+      text-wrap: balance;
+    }
+
+    .not-found__content .hero__description {
+      max-width: min(42rem, 100%);
+      font-size: var(--font-size-body);
+    }
+
+    .not-found__home {
+      margin-top: var(--spacing-80);
+      padding-inline: var(--spacing-28);
+      border-color: transparent;
+      color: var(--color-text-primary);
+      background: var(--color-bg-small-block);
+      text-align: center;
+    }
+
+    .not-found__home:hover {
+      border-color: transparent;
+      background-color: #2d2e2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main>
+      <article class="page__container card card--hero not-found">
+        <header class="header">
+          <div class="header__profile">
+            <figure class="header__avatar">
+              <img src="/assets/img_avatar.png" alt="Фото Андрея Глухова" width="68" height="68">
+            </figure>
+            <div class="header__info">
+              <a class="header__name" href="/">Андрей Глухов</a>
+              <p class="header__role">Продуктовый дизайнер</p>
+            </div>
+          </div>
+
+          <nav class="header__nav" aria-label="Основная навигация">
+            <button class="header__link email-copy" type="button" data-email="hi@andreyglukhov.com" aria-label="Скопировать email hi@andreyglukhov.com"><span>Email</span><span class="email-copy__icons" aria-hidden="true"><svg class="email-copy__copy" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><svg class="email-copy__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg></span></button>
+            <a class="header__link external-link" href="https://t.me/andrey_glukhov" target="_blank" rel="noopener noreferrer" aria-label="Telegram — открыть в новой вкладке">Telegram<svg class="external-link__arrow" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"/>
+</svg></a>
+            <a class="header__link external-link" href="/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Резюме — открыть в новой вкладке">Резюме<svg class="external-link__arrow" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"/>
+</svg></a>
+          </nav>
+        </header>
+
+        <section class="not-found__content" aria-labelledby="not-found-title">
+          <p class="not-found__code">404</p>
+          <h1 class="hero__title" id="not-found-title">Страница не найдена</h1>
+          <p class="hero__description">Возможно, ссылка устарела. Все кейсы собраны на&nbsp;главной.</p>
+          <a class="btn-pill not-found__home" href="/">На главную</a>
+        </section>
+      </article>
+    </main>
+  </div>
+  <script src="/js/email-copy.js?v=4"></script>
+</body>
+</html>
