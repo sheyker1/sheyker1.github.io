@@ -1,0 +1,14 @@
+# Local files and credentials must not enter the public repository.
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+node_modules/
+.vercel/
+.openai/
+cv-hh.pdf

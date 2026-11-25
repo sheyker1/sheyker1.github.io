@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114570812', 'ym');
+
+    ym(114570812, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  
+  <!-- /Yandex.Metrika counter -->
+  <meta name="description" content="Спроектировал бонусы, кешбэк, промокоды и приглашение друзей. Стоимость привлечения снизилась в 10 раз.">
+  <title>Программа лояльности Gmoji – Андрей Глухов</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=20260929-avatar">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=20260929-avatar">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20260929-avatar">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=shared-header-1">
+  <script src="/js/project-nav.js?v=project-nav-fade-4" defer></script>
+  <link rel="stylesheet" href="/css/transcribe-tabs.css?v=18">
+  <script src="/js/transcribe-tabs.js?v=github-pages-1" defer></script>
+  <script src="/js/pages-index-url.js"></script>
+</head>
+<body class="app-store-case app-store-case-v2 gmoji-loyalty-case">
+  <noscript><div><img src="https://mc.yandex.ru/watch/114570812" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+  <header class="mobile-header" data-mobile-floating-header>
+    <div class="mobile-header__bar">
+      <div class="mobile-header__profile">
+        
+          <img src="/assets/img_avatar.png" alt="" width="52" height="52">
+        
+        <div class="mobile-header__info">
+          <a class="mobile-header__name" href="/">Андрей Глухов</a>
+          <p class="mobile-header__role">Продуктовый дизайнер</p>
+        </div>
+      </div>
+      <button class="mobile-header__menu-btn" type="button" aria-expanded="false" aria-controls="mobile-header-menu" aria-label="Открыть меню">
+        <img src="/assets/icon_menu_24.svg" alt="" width="24" height="24" aria-hidden="true">
+      </button>
+    </div>
+    <div class="mobile-header__menu" id="mobile-header-menu" role="dialog" aria-modal="true" aria-label="Меню сайта" hidden>
+      <div class="mobile-header__menu-top">
+        <button class="mobile-header__close-btn" type="button" aria-label="Закрыть меню">
+          <img src="/assets/icon_close_24.svg" alt="" width="24" height="24" aria-hidden="true">
+        </button>
+      </div>
+      <nav class="mobile-header__menu-nav" aria-label="Навигация по проектам">
+        <a class="mobile-header__menu-link" href="/">Главная</a>
+        <a class="mobile-header__menu-link" href="/transcribe/">Transcribe</a>
+        <a class="mobile-header__menu-link" href="/transcribe-design-system/">Дизайн-система Transcribe</a>
+        <a class="mobile-header__menu-link" href="/gmoji/">Gmoji</a>
+        <a class="mobile-header__menu-link" href="/gmoji-loyalty/" aria-current="page">Программа лояльности Gmoji</a>
+      </nav>
+      <div class="mobile-header__menu-contacts">
+        <button class="mobile-header__contact-link email-copy" type="button" data-email="sheyker.com@gmail.com" aria-label="Скопировать email sheyker.com@gmail.com"><span>Email</span><span class="email-copy__icons" aria-hidden="true"><svg class="email-copy__copy" width="16" height="16" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg><svg class="email-copy__check" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"></path></svg></span></button>
+        <a class="mobile-header__contact-link external-link" href="https://t.me/andrey_glukhov" target="_blank" rel="noopener noreferrer" aria-label="Telegram – открыть в новой вкладке">Telegram<svg class="external-link__arrow" aria-hidden="true" width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"></path>
+</svg></a>
+        <a class="mobile-header__contact-link mobile-header__contact-link--resume" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+          Резюме
+          <svg aria-hidden="true" class="icon-color--subtle" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="page page--inner">
+
+    <main data-project-case>
+      <article class="page__container card card--hero page-inner__cover page-inner__cover--project-nav">
+
+        <header class="header">
+          <div class="header__profile">
+            <figure class="header__avatar">
+              <img src="/assets/img_avatar.png" alt="Фото Андрея Глухова" width="68" height="68">
+            </figure>
+            <div class="header__info">
+              <a class="header__name" href="/">Андрей Глухов</a>
+              <p class="header__role">Продуктовый дизайнер</p>
+            </div>
+          </div>
+
+          <nav class="header__nav" aria-label="Основная навигация">
+            <button class="header__link email-copy" type="button" data-email="sheyker.com@gmail.com" aria-label="Скопировать email sheyker.com@gmail.com"><span>Email</span><span class="email-copy__icons" aria-hidden="true"><svg class="email-copy__copy" width="16" height="16" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg><svg class="email-copy__check" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"></path></svg></span></button>
+            <a class="header__link external-link" href="https://t.me/andrey_glukhov" target="_blank" rel="noopener noreferrer" aria-label="Telegram – открыть в новой вкладке">Telegram<svg class="external-link__arrow" aria-hidden="true" width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"></path>
+</svg></a>
+            <a class="header__link external-link" href="/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Резюме – открыть в новой вкладке">Резюме<svg class="external-link__arrow" aria-hidden="true" width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"></path>
+</svg></a>
+          </nav>
+        <button class="header__menu-btn mobile-header__menu-btn" type="button" aria-expanded="false" aria-controls="mobile-header-menu" aria-label="Открыть меню">
+            <img src="/assets/icon_menu_24.svg" alt="" width="24" height="24" aria-hidden="true">
+          </button>
+        </header>
+
+
+
+        <nav class="project-nav" tabindex="0" aria-label="Материалы проекта Gmoji">
+  <a class="project-nav__link" href="/gmoji/">О проекте</a>
+  <a class="project-nav__link" href="/gmoji-loyalty/" aria-current="page">Программа лояльности</a>
+</nav>
+<div class="project-case-intro">
+
+<h1 class="page-inner__title">Программа лояльности</h1>
+<p class="page-inner__lead">Спроектировал логику, пользовательские сценарии и интерфейсы программы лояльности Gmoji: от приглашения друзей и накопления бонусов до их использования при покупке.</p>
+<ul class="page-inner__stats" aria-label="Результат и механики программы лояльности">
+  <li class="page-inner__stat">
+    <img class="page-inner__stat-icon" src="/assets/icon_wallet_68.svg" alt="" width="68" height="68" aria-hidden="true">
+    <div class="page-inner__stat-text">
+      <p class="page-inner__stat-value">В 10 раз</p>
+      <p class="page-inner__stat-label">ниже стоимость привлечения пользователя</p>
+      
+    </div>
+  </li>
+  <li class="page-inner__stat">
+    <img class="page-inner__stat-icon" src="/assets/icon_features_68.svg" alt="" width="68" height="68" aria-hidden="true">
+    <div class="page-inner__stat-text">
+      <p class="page-inner__stat-value">4 механики</p>
+      <p class="page-inner__stat-label">бонусы, кешбэк, приглашения друзей и промокоды</p>
+    </div>
+  </li>
+</ul>
+<figure class="page-inner__cover-media">
+  <img src="/assets/img_gmoji_case_cover.png" width="2080" height="1160" alt="Программа лояльности Gmoji: знакомство с бонусами и оплата покупки бонусами">
+</figure>
+</div>
+</article>
+<section class="page__container card page-inner__section" aria-labelledby="problems-heading">
+  <div class="case-row">
+    <h2 class="page-inner__section-heading" id="problems-heading">Проблема</h2>
+    <div class="page-inner__solution-content case-copy">
+      <p>Привлечение пользователей через рекламные активности (розыгрыш автомобиля, обзоры блогеров и публикации в медиа) обходится дорого.</p>
+    </div>
+  </div>
+</section>
+<section class="page__container card page-inner__section" aria-labelledby="task role">
+  <div class="case-row">
+    <h2 class="page-inner__section-heading" id="task">Задача</h2>
+    <div class="page-inner__solution-content case-copy">
+      <p>Снизить стоимость привлечения пользователей и повысить удержание. Для этого спроектировать программу лояльности, которая создаст дополнительный канал привлечения через рекомендации друзей и будет стимулировать повторные покупки.</p>
+    </div>
+  </div>
+  <div class="case-row case-role-row loyalty-role-row">
+    <h2 class="page-inner__solution-title" id="role">Мой вклад</h2>
+    <div class="page-inner__solution-content case-copy">
+      <p class="page-inner__solution-item-text">Систематизировал требования и описал логику программы: начисление и списание бонусов, ограничения, ошибки и различия между странами.</p>
+      <p class="page-inner__solution-item-text">Спроектировал пользовательские сценарии, интерфейсы и прототипы, подготовил материалы для разработки. Проводил дизайн-ревью реализации и тестировал начисление бонусов и доставку уведомлений.</p>
+    </div>
+  </div>
+</section>
+<section class="page__container card page-inner__section page-inner__section--solutions case-solutions" aria-labelledby="solutions-heading">
+<h2 class="page-inner__section-heading" id="solutions-heading">Решения</h2>
+<article class="page-inner__solution-card case-solution" aria-labelledby="program-logic">
+  <div class="page-inner__solution-body">
+    <h3 class="page-inner__solution-title" id="program-logic">Общая логика программы</h3>
+    <div class="page-inner__solution-content case-solution-copy"><p class="page-inner__solution-item-text">Систематизировал правила программы: кто, за какие действия и когда получает бонусы, как их можно потратить и какие ограничения действуют. Предусмотрел сценарии для новых и действующих пользователей.</p></div>
+  </div>
+  <div><ul class="page-inner__features loyalty-mechanics" aria-label="Четыре механики программы"><li class="page-inner__feature-card"><img class="page-inner__feature-icon" src="/assets/icon_wallet_68.svg" width="68" height="68" alt="" aria-hidden="true"><div class="page-inner__feature-body"><h4 class="page-inner__feature-title">Бонусы</h4><p class="page-inner__feature-text">Баллы для частичной или полной оплаты товаров и услуг из каталога.</p></div></li><li class="page-inner__feature-card"><img class="page-inner__feature-icon" src="/assets/icon_arrow_up_68.svg" width="68" height="68" alt="" aria-hidden="true"><div class="page-inner__feature-body"><h4 class="page-inner__feature-title">Кешбэк</h4><p class="page-inner__feature-text">Возврат бонусами части стоимости своих покупок и покупок приглашённых друзей.</p></div></li><li class="page-inner__feature-card"><img class="page-inner__feature-icon" src="/assets/icon_email_68.svg" width="68" height="68" alt="" aria-hidden="true"><div class="page-inner__feature-body"><h4 class="page-inner__feature-title">Приглашения</h4><p class="page-inner__feature-text">Пользователь и приглашённый им друг получают бонусы после первой покупки друга.</p></div></li><li class="page-inner__feature-card"><img class="page-inner__feature-icon" src="/assets/icon_component_settings_68.svg" width="68" height="68" alt="" aria-hidden="true"><div class="page-inner__feature-body"><h4 class="page-inner__feature-title">Промокоды</h4><p class="page-inner__feature-text">Бонусы по приглашениям, в маркетинговых кампаниях и в качестве компенсации от поддержки.</p></div></li></ul><p class="loyalty-shared-balance"><strong>Единый бонусный счёт</strong>Все начисления объединяются на одном балансе</p></div>
+</article>
+<article class="page-inner__solution-card case-solution" aria-labelledby="onboarding">
+  <div class="page-inner__solution-body">
+    <h3 class="page-inner__solution-title" id="onboarding">Знакомство с программой</h3>
+    <div class="page-inner__solution-content case-solution-copy"><p class="page-inner__solution-item-text">Спроектировал знакомство с программой: по ссылке друга – без ручного ввода промокода, при самостоятельной установке – с вводом кода или пропуском шага. Предусмотрел возможность ввести код позже через профиль в установленный срок.</p></div>
+  </div>
+  <figure class="page-inner__solution-media case-media"><img src="/assets/img_gmoji_case_1.png?v=8cc3339d0d" width="2080" height="2072" alt="Знакомство с программой лояльности Gmoji" loading="lazy" decoding="async"></figure>
+</article>
+<article class="page-inner__solution-card case-solution" aria-labelledby="balance">
+  <div class="page-inner__solution-body">
+    <h3 class="page-inner__solution-title" id="balance">Бонусный счёт и приглашения</h3>
+    <div class="page-inner__solution-content case-solution-copy"><p class="page-inner__solution-item-text">Объединил на экране бонусного счёта баланс, способы накопления и расходования бонусов, личный промокод и отправку приглашения.</p></div>
+  </div>
+  <figure class="page-inner__solution-media case-media"><img src="/assets/img_gmoji_case_2.png" width="2080" height="3446" alt="Бонусный счёт и приглашения в Gmoji" loading="lazy" decoding="async"></figure>
+</article>
+<article class="page-inner__solution-card case-solution" aria-labelledby="payment">
+  <div class="page-inner__solution-body">
+    <h3 class="page-inner__solution-title" id="payment">Оплата бонусами</h3>
+    <div class="page-inner__solution-content case-solution-copy"><p class="page-inner__solution-item-text">Встроил оплату бонусами в карточку товара с мгновенным пересчётом цены. Проработал частичную и полную оплату, сочетание со скидками и распределение бонусов между товарами. Кешбэк начисляется только на сумму, оплаченную деньгами.</p></div>
+  </div>
+  <figure class="page-inner__solution-media case-media"><img src="/assets/img_gmoji_case_3.png" width="2080" height="1160" alt="Оплата бонусами в Gmoji" loading="lazy" decoding="async"></figure>
+</article>
+<article class="page-inner__solution-card case-solution" aria-labelledby="states">
+  <div class="page-inner__solution-body">
+    <h3 class="page-inner__solution-title" id="states">Состояния и уведомления</h3>
+    <div class="page-inner__solution-content case-solution-copy"><p class="page-inner__solution-item-text">Проработал успешное применение промокода, ошибки и ограничения. В подтверждении приглашения указал, что награда поступит после первой покупки, чтобы пользователь не ожидал бонусов сразу после регистрации. Предусмотрел уведомления о начислении бонусов и кешбэка: пуши и баннеры в приложении.</p></div>
+  </div>
+  <figure class="page-inner__solution-media case-media"><img src="/assets/img_gmoji_case_4.png?v=201a949018" width="2080" height="1282" alt="Состояния и уведомления программы лояльности Gmoji" loading="lazy" decoding="async"></figure>
+</article>
+<article class="page-inner__solution-card case-solution" aria-labelledby="compensation">
+  <div class="page-inner__solution-body">
+    <h3 class="page-inner__solution-title" id="compensation">Компенсации через промокоды</h3>
+    <div class="page-inner__solution-content case-solution-copy"><p class="page-inner__solution-item-text">Поддержка могла отправить пользователю промокод на бонусные баллы, если он столкнулся с ошибкой в приложении. Пользователь сам выбирал, на какой товар или услугу из каталога потратить компенсацию.</p></div>
+  </div>
+  <figure class="page-inner__solution-media case-media"><img src="/assets/img_gmoji_case_5.png" width="2080" height="1428" alt="Компенсации через промокоды в Gmoji" loading="lazy" decoding="async"></figure>
+</article>
+<article class="page-inner__solution-card case-solution" aria-labelledby="countries">
+  <div class="page-inner__solution-body">
+    <h3 class="page-inner__solution-title" id="countries">Условия для разных стран</h3>
+    <div class="page-inner__solution-content case-solution-copy"><p class="page-inner__solution-item-text">Учёл различия между странами: размер кешбэка, стоимость бонуса, сроки и доступность механик. Зафиксировал правила в документации и адаптировал знакомство с программой для варианта без приветственных бонусов.</p></div>
+  </div>
+  
+</article>
+
+<article class="page-inner__solution-card case-solution" aria-labelledby="takeaway">
+  <div class="page-inner__solution-body">
+    <h3 class="page-inner__solution-title" id="takeaway">Вывод</h3>
+    <div class="page-inner__solution-content case-solution-copy"><p class="page-inner__solution-item-text">Механики программы оказались тесно связаны: изменения в начислении бонусов влияли на оплату, приглашения и уведомления. Этот опыт показал важность проверки всей цепочки сценариев при изменении отдельных правил.</p></div>
+  </div>
+  
+</article>
+</section>
+<section class="page__container card page-inner__section page-inner__section--results" aria-labelledby="results">
+  <h2 class="page-inner__section-heading" id="results">Результаты</h2>
+  <ul class="page-inner__results loyalty-results">
+    <li class="page-inner__stat page-inner__stat--result loyalty-result-primary">
+      <img class="page-inner__stat-icon" src="/assets/icon_wallet_68.svg" alt="" width="68" height="68" aria-hidden="true">
+      <div class="page-inner__stat-text">
+        <p class="page-inner__result-metric">В 10 раз</p>
+        <p class="page-inner__stat-label">ниже стоимость привлечения: 100 ₽ вместо 1 000 ₽</p>
+      </div>
+          <div class="loyalty-result-method">
+        <p class="case-footnote">По данным команды, для каждого канала затраты делили на количество привлечённых пользователей. В программе лояльности их определяли по личным промокодам и реферальным ссылкам. Полученную стоимость сравнивали с прежними рекламными активностями.</p>
+      </div>
+    </li>
+    <li class="page-inner__stat page-inner__stat--result">
+      <img class="page-inner__stat-icon" src="/assets/icon_arrow_up_68.svg" alt="" width="68" height="68" aria-hidden="true">
+      <div class="page-inner__stat-text">
+        <p class="page-inner__result-metric">Рост удержания</p>
+        <p class="page-inner__stat-label">пользователи чаще продолжали пользоваться приложением</p>
+      </div>
+    </li>
+    <li class="page-inner__stat page-inner__stat--result">
+      <img class="page-inner__stat-icon" src="/assets/icon_magnet_68.svg" alt="" width="68" height="68" aria-hidden="true">
+      <div class="page-inner__stat-text">
+        <p class="page-inner__result-metric">Возврат пользователей</p>
+        <p class="page-inner__stat-label">больше людей возвращались в приложение</p>
+      </div>
+    </li>
+  </ul>
+</section>
+<nav class="page__container card case-navigation" aria-label="Навигация по кейсам">
+  <a class="interactive-card case-navigation__link" href="/gmoji/">
+    <span class="case-navigation__direction">← Предыдущий кейс</span>
+    <h2 class="case-navigation__title">Редизайн Gmoji</h2>
+  </a>
+  <a class="interactive-card case-navigation__link" href="/transcribe/">
+    <span class="case-navigation__direction">Следующий кейс →</span>
+    <h2 class="case-navigation__title">Transcribe: развитие продукта</h2>
+  </a>
+</nav>
+</main>
+
+    <footer class="page__container card card--contact" aria-labelledby="contact-title">
+      <div class="contact__intro">
+        <h2 class="contact__title" id="contact-title">Давайте работать<br>вместе</h2>
+        <a class="btn-pill" href="/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Скачать резюме">
+          Резюме
+          <svg class="btn-pill__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+      <div class="contact__actions">
+        <button class="contact-card interactive-card contact-card--email-copy" type="button" data-email-copy data-email="sheyker.com@gmail.com" aria-label="Скопировать email sheyker.com@gmail.com">
+          <img class="contact-card__icon" src="/assets/icon_email_68.svg" alt="" aria-hidden="true">
+          <span class="contact-card__value contact-card__value--copy"><span>sheyker.com@gmail.com</span><span class="email-copy__icons" aria-hidden="true"><svg class="email-copy__copy" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><svg class="email-copy__check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg></span></span>
+        </button>
+        <a class="contact-card interactive-card" href="https://t.me/andrey_glukhov" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram @andrey_glukhov">
+          <img class="contact-card__icon" src="/assets/icon_telegram_68.svg" alt="" aria-hidden="true">
+          <span class="contact-card__value contact-card__value--external"><span>@andrey_glukhov</span><img class="contact-card__external-icon" src="/assets/icon_external_link_20.svg" alt="" aria-hidden="true"></span>
+        </a>
+      </div>
+    </footer>
+
+  </div>
+  <script src="/js/typography.js?v=transcribe-tabs-1"></script>
+  <script src="/js/reveal-cards.js?v=transcribe-tabs-1"></script>
+  <script>
+    (function () {
+      var floatingHeader = document.querySelector("[data-mobile-floating-header]");
+      var mainHeader = document.querySelector(".header");
+      if (!floatingHeader || !mainHeader) return;
+
+      var mediaQuery = window.matchMedia("(max-width: 767.98px)");
+      var menuPanel = floatingHeader.querySelector(".mobile-header__menu");
+      var openButton = floatingHeader.querySelector(".mobile-header__menu-btn");
+      var closeButton = floatingHeader.querySelector(".mobile-header__close-btn");
+      var menuLinks = floatingHeader.querySelectorAll(".mobile-header__menu-link, .mobile-header__contact-link");
+      var lastScrollY = window.scrollY;
+      var menuCloseCleanupTimer = null;
+      var preserveFloatingHeaderAfterMenuClose = false;
+      var pageScrollY = 0;
+      var isPageScrollLocked = false;
+
+      function isMenuOpen() {
+        return floatingHeader.classList.contains("mobile-header--menu-open");
+      }
+
+      function isMainHeaderHidden() {
+        return mainHeader.getBoundingClientRect().bottom <= 0;
+      }
+
+      function isMainHeaderFullyVisible() {
+        var rect = mainHeader.getBoundingClientRect();
+        return rect.top >= 0 && rect.bottom <= window.innerHeight;
+      }
+
+      function lockPageScroll() {
+        if (isPageScrollLocked) return;
+        pageScrollY = window.scrollY;
+        document.body.style.position = "fixed";
+        document.body.style.top = "-" + pageScrollY + "px";
+        document.body.style.left = "0";
+        document.body.style.right = "0";
+        document.body.style.width = "100%";
+        document.body.style.overflow = "hidden";
+        isPageScrollLocked = true;
+      }
+
+      function unlockPageScroll() {
+        if (!isPageScrollLocked) return;
+        var root = document.documentElement;
+        var previousScrollBehavior = root.style.scrollBehavior;
+        root.style.scrollBehavior = "auto";
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.left = "";
+        document.body.style.right = "";
+        document.body.style.width = "";
+        document.body.style.overflow = "";
+        window.scrollTo(0, pageScrollY);
+        root.style.scrollBehavior = previousScrollBehavior;
+        isPageScrollLocked = false;
+      }
+
+      var lastMenuButtonRect = null;
+      var menuButtonTopOffset = 0;
+
+      function captureMenuButtonRect() {
+        if (!openButton) return;
+        lastMenuButtonRect = openButton.getBoundingClientRect();
+      }
+
+      function applyCloseButtonPosition(rect) {
+        if (!closeButton || !rect) return;
+        closeButton.style.top = rect.top + "px";
+        closeButton.style.left = rect.left + "px";
+        closeButton.style.right = "auto";
+        closeButton.style.bottom = "auto";
+      }
+
+      function syncCloseButtonPosition() {
+        if (!openButton || !lastMenuButtonRect) return;
+        var rect = openButton.getBoundingClientRect();
+        applyCloseButtonPosition({
+          top: rect.top + menuButtonTopOffset,
+          left: rect.left
+        });
+      }
+
+      function clearCloseButtonPosition() {
+        if (!closeButton) return;
+        lastMenuButtonRect = null;
+        menuButtonTopOffset = 0;
+        closeButton.style.top = "";
+        closeButton.style.left = "";
+        closeButton.style.right = "";
+        closeButton.style.bottom = "";
+      }
+
+      function openMenu(event) {
+        if (event && event.currentTarget) openButton = event.currentTarget;
+        if (!menuPanel || !openButton) return;
+        if (menuCloseCleanupTimer) {
+          window.clearTimeout(menuCloseCleanupTimer);
+          menuCloseCleanupTimer = null;
+        }
+        floatingHeader.classList.remove("mobile-header--menu-closing");
+        captureMenuButtonRect();
+        applyCloseButtonPosition(lastMenuButtonRect);
+        menuPanel.hidden = false;
+        floatingHeader.classList.add("mobile-header--menu-open");
+        openButton.setAttribute("aria-expanded", "true");
+        menuPanel.scrollTop = 0;
+        lockPageScroll();
+        menuButtonTopOffset = lastMenuButtonRect.top - openButton.getBoundingClientRect().top;
+        requestAnimationFrame(function () {
+          if (!isMenuOpen()) return;
+          syncCloseButtonPosition();
+          if (closeButton) closeButton.focus({ preventScroll: true });
+        });
+      }
+
+      function closeMenu() {
+        if (!menuPanel || !openButton) return;
+        var wasMenuOpen = isMenuOpen();
+        var shouldShowFloatingHeader = isMainHeaderHidden();
+        menuPanel.hidden = true;
+        clearCloseButtonPosition();
+        floatingHeader.classList.add("mobile-header--menu-closing");
+        floatingHeader.classList.remove("mobile-header--menu-open");
+        floatingHeader.classList.toggle("mobile-header--visible", shouldShowFloatingHeader);
+        openButton.setAttribute("aria-expanded", "false");
+        unlockPageScroll();
+        if (wasMenuOpen) {
+          var focusTarget = mediaQuery.matches ? openButton : mainHeader.querySelector("a, button");
+          if (focusTarget) focusTarget.focus({ preventScroll: true });
+        }
+        preserveFloatingHeaderAfterMenuClose = shouldShowFloatingHeader;
+        if (menuCloseCleanupTimer) window.clearTimeout(menuCloseCleanupTimer);
+        menuCloseCleanupTimer = window.setTimeout(function () {
+          floatingHeader.classList.remove("mobile-header--menu-closing");
+          menuCloseCleanupTimer = null;
+        }, 220);
+      }
+
+      function hideFloatingHeader() {
+        floatingHeader.classList.remove("mobile-header--visible");
+        closeMenu();
+      }
+
+      function updateHeaderState() {
+        if (!mediaQuery.matches) {
+          hideFloatingHeader();
+          return;
+        }
+        if (isMenuOpen()) return;
+
+        var currentScrollY = window.scrollY;
+        var scrollDelta = currentScrollY - lastScrollY;
+        var scrollingUp = scrollDelta < -2;
+        var scrollingDown = scrollDelta > 2;
+        var headerHidden = isMainHeaderHidden();
+        var headerVisible = isMainHeaderFullyVisible();
+
+        if (preserveFloatingHeaderAfterMenuClose) {
+          floatingHeader.classList.add("mobile-header--visible");
+          preserveFloatingHeaderAfterMenuClose = false;
+          lastScrollY = currentScrollY;
+          return;
+        }
+
+        if (headerVisible || scrollingDown || !headerHidden) {
+          floatingHeader.classList.remove("mobile-header--visible");
+          if (headerVisible) closeMenu();
+        } else if (scrollingUp && headerHidden) {
+          floatingHeader.classList.add("mobile-header--visible");
+        }
+
+        lastScrollY = currentScrollY;
+      }
+
+      if (openButton) openButton.addEventListener("click", openMenu);
+      var mainMenuButton = mainHeader.querySelector(".header__menu-btn");
+      if (mainMenuButton) mainMenuButton.addEventListener("click", openMenu);
+      if (closeButton) closeButton.addEventListener("click", closeMenu);
+      menuLinks.forEach(function (link) {
+        if (!link.matches(".email-copy, [data-email-copy]")) {
+          link.addEventListener("click", closeMenu);
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (!isMenuOpen()) return;
+        if (event.key === "Escape") {
+          event.preventDefault();
+          closeMenu();
+          return;
+        }
+        if (event.key !== "Tab") return;
+        var focusable = Array.prototype.slice.call(
+          menuPanel.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+        ).filter(function (element) {
+          return element.getClientRects().length && window.getComputedStyle(element).visibility !== "hidden";
+        });
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (!first) {
+          event.preventDefault();
+          return;
+        }
+        var focusOutsideMenu = !menuPanel.contains(document.activeElement);
+        if (event.shiftKey && (document.activeElement === first || focusOutsideMenu)) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || focusOutsideMenu)) {
+          event.preventDefault();
+          first.focus({ preventScroll: true });
+        }
+      });
+
+      window.addEventListener("scroll", updateHeaderState, { passive: true });
+      window.addEventListener("resize", function () {
+        updateHeaderState();
+        if (floatingHeader.classList.contains("mobile-header--menu-open")) {
+          syncCloseButtonPosition();
+        }
+      });
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", function () {
+          if (floatingHeader.classList.contains("mobile-header--menu-open")) {
+            syncCloseButtonPosition();
+          }
+        });
+      }
+      updateHeaderState();
+    })();
+  </script>
+  <script src="/js/email-copy.js?v=4"></script>
+  <script src="/js/contact-card-press.js?v=1"></script>
+  <script src="/js/case-navigation-press.js?v=transcribe-tabs-1"></script>
+</body>
+</html>

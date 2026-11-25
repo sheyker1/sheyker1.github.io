@@ -1,0 +1,85 @@
+.project-nav[data-smooth-tabs]:not(.project-nav--floating) {
+  position: relative;
+}
+
+.project-nav[data-smooth-tabs] .project-nav__link {
+  position: relative;
+  z-index: 1;
+}
+
+.project-nav--floating.project-nav--handoff {
+  transition: none;
+}
+
+.project-nav[data-smooth-tabs] .project-nav__link[aria-current="page"],
+.project-nav[data-smooth-tabs] .project-nav__link:hover {
+  background-color: transparent;
+}
+
+.project-nav__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-bg-small-block);
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .project-nav[data-smooth-tabs] {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .project-nav[data-smooth-tabs].project-nav--fade-left {
+    --project-nav-left-edge-color: transparent;
+  }
+
+  .project-nav[data-smooth-tabs].project-nav--fade-right {
+    --project-nav-right-edge-color: transparent;
+  }
+
+  .project-nav[data-smooth-tabs]:is(.project-nav--fade-left, .project-nav--fade-right) > .project-nav__link:not([aria-current="page"]) {
+    --project-nav-left-edge: calc(var(--project-nav-scroll-left) - var(--project-nav-link-left));
+    --project-nav-right-edge: calc(var(--project-nav-left-edge) + var(--project-nav-visible-width));
+    --project-nav-edge-mask: linear-gradient(to right,
+      var(--project-nav-left-edge-color, #000) var(--project-nav-left-edge),
+      #000 calc(var(--project-nav-left-edge) + 40px),
+      #000 calc(var(--project-nav-right-edge) - 40px),
+      var(--project-nav-right-edge-color, #000) var(--project-nav-right-edge)
+    );
+    -webkit-mask-image: var(--project-nav-edge-mask);
+    mask-image: var(--project-nav-edge-mask);
+  }
+}
+
+.project-case-intro {
+  position: relative;
+  display: flow-root;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-case-intro--entering > * {
+    animation: project-case-enter 900ms ease;
+  }
+
+  .project-case-intro--entering > .page-inner__title {
+    --case-enter-start-opacity: 0.4;
+  }
+
+  .project-case-intro--entering > .page-inner__lead {
+    --case-enter-start-opacity: 0.2;
+  }
+}
+
+@keyframes project-case-enter {
+  from {
+    opacity: var(--case-enter-start-opacity, 0);
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

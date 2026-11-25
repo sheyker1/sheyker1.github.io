@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114570812', 'ym');
+
+    ym(114570812, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  
+  <!-- /Yandex.Metrika counter -->
+  <meta name="description" content="Провёл исследования, переработал интерфейсы и создал дизайн-систему. Время проектирования сократилось в 1,5 раза.">
+  <title>Transcribe – Андрей Глухов</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=20260929-avatar">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=20260929-avatar">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20260929-avatar">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=shared-header-1">
+  <script src="/js/project-nav.js?v=project-nav-fade-4" defer></script>
+  <link rel="stylesheet" href="/css/transcribe-tabs.css?v=18">
+  <script src="/js/transcribe-tabs.js?v=github-pages-1" defer></script>
+  <script src="/js/pages-index-url.js"></script>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/114570812" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <header class="mobile-header" data-mobile-floating-header>
+    <div class="mobile-header__bar">
+      <div class="mobile-header__profile">
+        <a class="mobile-header__avatar" href="/" aria-label="Главная">
+          <img src="/assets/img_avatar.png" alt="" width="52" height="52">
+        </a>
+        <div class="mobile-header__info">
+          <a class="mobile-header__name" href="/">Андрей Глухов</a>
+          <p class="mobile-header__role">Продуктовый дизайнер</p>
+        </div>
+      </div>
+      <button class="mobile-header__menu-btn" type="button" aria-expanded="false" aria-controls="mobile-header-menu" aria-label="Открыть меню">
+        <img src="/assets/icon_menu_24.svg" alt="" width="24" height="24" aria-hidden="true">
+      </button>
+    </div>
+    <div class="mobile-header__menu" id="mobile-header-menu" role="dialog" aria-modal="true" aria-label="Меню сайта" hidden>
+      <div class="mobile-header__menu-top">
+        <button class="mobile-header__close-btn" type="button" aria-label="Закрыть меню">
+          <img src="/assets/icon_close_24.svg" alt="" width="24" height="24" aria-hidden="true">
+        </button>
+      </div>
+      <nav class="mobile-header__menu-nav" aria-label="Навигация по проектам">
+        <a class="mobile-header__menu-link" href="/">Главная</a>
+        <a class="mobile-header__menu-link" href="/transcribe/">Transcribe</a>
+        <a class="mobile-header__menu-link" href="/transcribe-design-system/">Дизайн-система Transcribe</a>
+        <a class="mobile-header__menu-link" href="/gmoji/">Gmoji</a>
+      </nav>
+      <div class="mobile-header__menu-contacts">
+        <button class="mobile-header__contact-link email-copy" type="button" data-email="sheyker.com@gmail.com" aria-label="Скопировать email sheyker.com@gmail.com"><span>Email</span><span class="email-copy__icons" aria-hidden="true"><svg class="email-copy__copy" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><svg class="email-copy__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg></span></button>
+        <a class="mobile-header__contact-link external-link" href="https://t.me/andrey_glukhov" target="_blank" rel="noopener noreferrer" aria-label="Telegram — открыть в новой вкладке">Telegram<svg class="external-link__arrow" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"/>
+</svg></a>
+        <a class="mobile-header__contact-link mobile-header__contact-link--resume" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+          Резюме
+          <svg aria-hidden="true" class="icon-color--subtle" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="page page--inner">
+
+    <main data-transcribe-case>
+      <article class="page__container card card--hero page-inner__cover page-inner__cover--project-nav">
+
+        <header class="header">
+          <div class="header__profile">
+            <figure class="header__avatar">
+              <img src="/assets/img_avatar.png" alt="Фото Андрея Глухова" width="68" height="68">
+            </figure>
+            <div class="header__info">
+              <a class="header__name" href="/">Андрей Глухов</a>
+              <p class="header__role">Продуктовый дизайнер</p>
+            </div>
+          </div>
+
+          <nav class="header__nav" aria-label="Основная навигация">
+            <button class="header__link email-copy" type="button" data-email="sheyker.com@gmail.com" aria-label="Скопировать email sheyker.com@gmail.com"><span>Email</span><span class="email-copy__icons" aria-hidden="true"><svg class="email-copy__copy" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><svg class="email-copy__check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg></span></button>
+            <a class="header__link external-link" href="https://t.me/andrey_glukhov" target="_blank" rel="noopener noreferrer" aria-label="Telegram — открыть в новой вкладке">Telegram<svg class="external-link__arrow" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"/>
+</svg></a>
+            <a class="header__link external-link" href="/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Резюме — открыть в новой вкладке">Резюме<svg class="external-link__arrow" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"/>
+</svg></a>
+          </nav>
+        <button class="header__menu-btn mobile-header__menu-btn" type="button" aria-expanded="false" aria-controls="mobile-header-menu" aria-label="Открыть меню">
+            <img src="/assets/icon_menu_24.svg" alt="" width="24" height="24" aria-hidden="true">
+          </button>
+        </header>
+
+        <nav class="project-nav" tabindex="0" aria-label="Материалы проекта Transcribe">
+          <a class="project-nav__link" href="/transcribe/" aria-current="page">О проекте</a>
+          <a class="project-nav__link" href="/transcribe-subscription/">Подписка и онбординг</a>
+          <a class="project-nav__link" href="/transcribe-app-store/">Скриншоты App Store</a>
+          <a class="project-nav__link" href="/transcribe-design-system/">Дизайн-система</a>
+        </nav>
+        <div class="project-case-intro">
+
+        <h1 class="page-inner__title">Исследо&shy;вания, дизайн и&nbsp;развитие продукта</h1>
+
+        <p class="page-inner__lead">
+          Переработал пользовательский опыт: от&nbsp;исследований и&nbsp;CJM до&nbsp;атомарной дизайн-системы и&nbsp;A/B-тестов. Сократил время проектирования в&nbsp;1.5 раза и&nbsp;унифицировал логику между платформами.
+        </p>
+
+        <ul class="page-inner__stats" aria-label="Ключевые метрики проекта">
+          <li class="page-inner__stat">
+            <img class="page-inner__stat-icon" src="/assets/icon_app_store_68.svg" alt="" width="68" height="68" aria-hidden="true">
+            <div class="page-inner__stat-text">
+              <p class="page-inner__stat-value">4 млн</p>
+              <p class="page-inner__stat-label">установок</p>
+            </div>
+          </li>
+          <li class="page-inner__stat">
+            <img class="page-inner__stat-icon" src="/assets/icon_arrow_up_68.svg" alt="" width="68" height="68" aria-hidden="true">
+            <div class="page-inner__stat-text">
+              <p class="page-inner__stat-value">+35%</p>
+              <p class="page-inner__stat-label">рост подписок</p>
+            </div>
+          </li>
+          <li class="page-inner__stat">
+            <img class="page-inner__stat-icon" src="/assets/icon_arrow_up_68.svg" alt="" width="68" height="68" aria-hidden="true">
+            <div class="page-inner__stat-text">
+              <p class="page-inner__stat-value">+20%</p>
+              <p class="page-inner__stat-label">рост скачиваний</p>
+            </div>
+          </li>
+        </ul>
+
+        <figure class="page-inner__cover-media">
+          <img src="/assets/img_transcribe_cover.png" alt="Скриншоты приложения Transcribe на разных устройствах" width="1040" height="580">
+        </figure>
+
+        <dl class="page-inner__meta">
+          <div class="page-inner__meta-group">
+            <div class="page-inner__meta-row">
+              <dt class="page-inner__meta-term">Проект</dt>
+              <dd class="page-inner__meta-value">Transcribe</dd>
+            </div>
+            <dd class="page-inner__meta-desc">
+              Преобразование речи в текст из аудио, видео или в реальном времени. Сокращает часы ручной расшифровки до нескольких минут. Идеально для встреч, интервью, лекций, подкастов и заметок.
+            </dd>
+          </div>
+          <div class="page-inner__meta-row">
+            <dt class="page-inner__meta-term">Период</dt>
+            <dd class="page-inner__meta-value">2021 – текущее время</dd>
+          </div>
+          <div class="page-inner__meta-row">
+            <dt class="page-inner__meta-term">Роль</dt>
+            <dd class="page-inner__meta-value">Продуктовый дизайнер</dd>
+          </div>
+          <div class="page-inner__meta-row">
+            <dt class="page-inner__meta-term">Обязанности</dt>
+            <dd class="page-inner__meta-value">Исследование, Проектирование, Прототипирование, Дизайн-система</dd>
+          </div>
+          <div class="page-inner__meta-row">
+            <dt class="page-inner__meta-term">Платформа</dt>
+            <dd class="page-inner__meta-value">iOS, iPadOS, macOS, Web</dd>
+          </div>
+          <div class="page-inner__meta-row">
+            <dt class="page-inner__meta-term">Команда</dt>
+            <dd class="page-inner__meta-value">
+              Руководитель, Продуктовый дизайнер, iOS-разработчик, Web-разработчик, Тестировщик, SEO специалист, Копирайтер
+            </dd>
+          </div>
+        </dl>
+
+        <div class="page-inner__links">
+          <a class="btn-pill" href="https://apps.apple.com/us/app/transcribe-speech-to-text/id1241342461" target="_blank" rel="noopener noreferrer">
+            App Store
+            <img class="btn-pill__icon" src="/assets/icon_external_link_20.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="btn-pill" href="https://transcribe.com/" target="_blank" rel="noopener noreferrer">
+            Transcribe.com
+            <img class="btn-pill__icon" src="/assets/icon_external_link_20.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+        </div>
+      </article>
+
+      <section class="page__container card page-inner__section page-inner__section--problems" aria-labelledby="problems-heading">
+        <div class="page-inner__section-layout">
+          <h2 class="page-inner__section-heading" id="problems-heading">Проблемы</h2>
+          <ol class="page-inner__list">
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">1</span>
+              <p class="page-inner__list-text">Отсутствие исследований пользователей и точек роста продукта</p>
+            </li>
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">2</span>
+              <p class="page-inner__list-text">Ошибки юзабилити и несогласо&shy;ванность интерфейсов</p>
+            </li>
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">3</span>
+              <p class="page-inner__list-text">Отсутствие единой логики между платформами</p>
+            </li>
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">4</span>
+              <p class="page-inner__list-text">Отсутствие полной и масштабируемой дизайн-системы</p>
+            </li>
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">5</span>
+              <p class="page-inner__list-text">Отсутствие стандарта анализа задач, нечеткий сценарий работы и хаотичная структура макетов</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="page__container card page-inner__section page-inner__section--tasks" aria-labelledby="tasks-heading">
+        <div class="page-inner__section-layout">
+          <h2 class="page-inner__section-heading" id="tasks-heading">Задачи</h2>
+          <ol class="page-inner__list">
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">1</span>
+              <p class="page-inner__list-text">Выявить потребности пользователей и точки роста продукта</p>
+            </li>
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">2</span>
+              <p class="page-inner__list-text">Исправить ошибки юзабилити и улучшить ключевые сценарии</p>
+            </li>
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">3</span>
+              <p class="page-inner__list-text">Унифицировать опыт на всех платформах</p>
+            </li>
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">4</span>
+              <p class="page-inner__list-text">Разработать дизайн-систему</p>
+            </li>
+            <li class="page-inner__list-item">
+              <span class="page-inner__badge" aria-hidden="true">5</span>
+              <p class="page-inner__list-text">Выстроить рабочие процессы и организацию макетов</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="page__container card page-inner__section page-inner__section--solutions" aria-labelledby="solutions-heading">
+        <h2 class="page-inner__section-heading" id="solutions-heading">Решения</h2>
+
+        <article class="page-inner__solution-card page-inner__solution-card--analysis">
+          <figure
+            class="page-inner__solution-media"
+            role="region"
+            aria-label="Скриншоты анализа продукта: UX-аудит, исследования и стратегия"
+          >
+            <img loading="lazy" src="/assets/img_transcribe_analysis_1.png" alt="" width="1040" height="622" decoding="async">
+            <img src="/assets/img_transcribe_analysis_2.png" alt="" width="1040" height="622" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_analysis_3.png" alt="" width="1040" height="622" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_analysis_4.png" alt="" width="1040" height="622" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_analysis_5.png" alt="" width="1040" height="622" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_analysis_6.png" alt="" width="1040" height="622" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_analysis_7.png" alt="" width="1040" height="622" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_analysis_8.png" alt="" width="1040" height="622" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_analysis_9.png" alt="" width="1040" height="622" loading="lazy" decoding="async">
+            <img loading="lazy"
+              class="page-inner__solution-media-image--desktop"
+              src="/assets/img_transcribe_analysis.png"
+              alt=""
+              width="1040"
+              height="622"
+            >
+          </figure>
+
+          <div class="page-inner__solution-body">
+            <h3 class="page-inner__solution-title">Провёл комплексный анализ продукта</h3>
+
+            <ol class="page-inner__solution-list">
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">1</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Аудит текущего состояния</p>
+                  <p class="page-inner__solution-item-text">
+                    Провёл UX-аудит продукта на iOS, iPadOS, macOS и Web: выявил ошибки юзабилити и баги в ключевых сценариях, визуализировал информационную архитектуру и схему переходов между экранами.
+                  </p>
+                </div>
+              </li>
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">2</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Исследование пользователей и рынка</p>
+                  <p class="page-inner__solution-item-text">
+                    Обработал 800+ отзывов, провёл CustDev-интервью, сегментировал целевую аудиторию, составил CJM с проблемными зонами и проанализировал конкурентов.
+                  </p>
+                </div>
+              </li>
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">3</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Анализ и стратегия</p>
+                  <p class="page-inner__solution-item-text">
+                    Провёл JTBD-исследование, выявив скрытые боли и неочевидных конкурентов, а также проанализировал воронку AARRR с разработкой плана улучшения конверсий.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="page-inner__solution-card page-inner__solution-card--product">
+          <figure
+            class="page-inner__solution-media"
+            role="region"
+            aria-label="Скриншоты интерфейсов Transcribe на iOS, iPadOS, macOS и Web"
+          >
+            <img loading="lazy" src="/assets/img_transcribe_ui_1.png" alt="" width="276" height="600" decoding="async">
+            <img src="/assets/img_transcribe_ui_2.png" alt="" width="276" height="600" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_ui_3.png" alt="" width="276" height="600" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_ui_4.png" alt="" width="276" height="600" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_ui_5.png" alt="" width="276" height="600" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_ui_6.png" alt="" width="276" height="600" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_ui_7.png" alt="" width="276" height="600" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_ui_8.png" alt="" width="276" height="600" loading="lazy" decoding="async">
+            <img loading="lazy"
+              class="page-inner__solution-media-image--desktop"
+              src="/assets/img_transcribe_ui.png"
+              alt="Интерфейсы Transcribe: ключевые сценарии на iOS, iPadOS, macOS и Web"
+              width="1040"
+              height="1076"
+            >
+          </figure>
+
+          <div class="page-inner__solution-body">
+            <h3 class="page-inner__solution-title">Спроектировал и улучшил продуктовые решения</h3>
+
+            <ol class="page-inner__solution-list">
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">1</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Ключевые сценарии и интерфейсы</p>
+                  <div class="page-inner__solution-desc">
+                    <p class="page-inner__solution-item-text">
+                      Спроектировал новые и переработал существующие сценарии. Привёл интерфейсы iOS, iPadOS, macOS и Web к единому стилю.
+                    </p>
+                    <p class="page-inner__solution-item-text">
+                      Улучшил работу с транскрипцией и экспортом, упростил управление подпиской и покупку времени. Добавил AI-функции для создания краткого содержания и перевода транскрипций.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="page-inner__solution-card page-inner__solution-card--design-system">
+          <figure
+            class="page-inner__solution-media"
+            role="region"
+            aria-label="Скриншоты дизайн-системы Transcribe: компоненты и документация"
+          >
+            <img
+              class="page-inner__solution-media-image--desktop"
+              src="/assets/img_transcribe_design_system.png"
+              alt="Дизайн-система Transcribe: библиотека компонентов и документация"
+              width="1040"
+              height="578"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+
+          <div class="page-inner__solution-body page-inner__solution-body--spaced">
+            <div class="page-inner__solution-title page-inner__solution-title--spacer" aria-hidden="true"></div>
+
+            <ol class="page-inner__solution-list">
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">2</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Дизайн-система</p>
+                  <p class="page-inner__solution-item-text">
+                    С нуля выстроил масштабируемую дизайн-систему: ускорил проектирование, обеспечил единый визуальный язык и логику на iOS, iPadOS, macOS и Web, а также создал витрину компонентов в коде.
+                  </p>
+
+                  <a class="btn-pill btn-pill--next page-inner__solution-cta" href="/transcribe-design-system/">
+                    Подробнее
+                    <img loading="lazy" class="btn-pill__icon" src="/assets/icon_next_20.svg" alt="" aria-hidden="true">
+                  </a>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="page-inner__solution-card page-inner__solution-card--site">
+          <figure
+            class="page-inner__solution-media"
+            role="region"
+            aria-label="Скриншоты маркетингового сайта Transcribe и онлайн редактора"
+          >
+            <img
+              src="/assets/img_transcribe_site.png"
+              alt="Маркетинговый сайт Transcribe: страницы и тарифы"
+              width="1040"
+              height="803"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+
+          <div class="page-inner__solution-body page-inner__solution-body--spaced">
+            <div class="page-inner__solution-title page-inner__solution-title--spacer" aria-hidden="true"></div>
+
+            <ol class="page-inner__solution-list">
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">3</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Сайт для нового канала привлечения</p>
+                  <p class="page-inner__solution-item-text">
+                    Спроектировал маркетинговый сайт как отдельный канал привлечения пользователей вне App Store и переход в онлайн редактор.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="page-inner__solution-card page-inner__solution-card--app-store">
+          <figure
+            class="page-inner__solution-media"
+            role="region"
+            aria-label="Скриншоты для App Store: обновлённая визуальная концепция и локализации"
+          >
+            <img loading="lazy" src="/assets/img_transcribe_app_store.png" alt="" width="1040" height="240" decoding="async">
+            <img
+              class="page-inner__solution-media-image--desktop"
+              src="/assets/img_transcribe_app_store.png"
+              alt="Скриншоты Transcribe для App Store: обновлённая визуальная концепция"
+              width="1040"
+              height="240"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+
+          <div class="page-inner__solution-body page-inner__solution-body--spaced">
+            <div class="page-inner__solution-title page-inner__solution-title--spacer" aria-hidden="true"></div>
+
+            <ol class="page-inner__solution-list">
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">4</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Скриншоты для App Store</p>
+                  <div class="page-inner__solution-desc">
+                    <p class="page-inner__solution-item-text">
+                      Разработал новую визуальную концепцию скриншотов для App Store с адаптацией под iOS, iPadOS и macOS, а также локализацией на 18 языков.
+                    </p>
+                    <p class="page-inner__solution-item-text">
+                      Эффективность решений проверял через A/B тесты. После анализа первых неудачных тестов полностью переработал концепцию и добился роста конверсии даже в низкий сезон.
+                    </p>
+                  </div>
+                  <a class="btn-pill btn-pill--next page-inner__solution-cta" href="/transcribe-app-store/">Подробнее<img loading="lazy" class="btn-pill__icon" src="/assets/icon_next_20.svg" alt="" aria-hidden="true"></a>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="page-inner__solution-card page-inner__solution-card--work-processes">
+          <figure
+            class="page-inner__solution-media"
+            role="region"
+            aria-label="Шаблоны и организация рабочих процессов"
+          >
+            <img loading="lazy" src="/assets/img_transcribe_work_processes_1.png" alt="" width="669" height="400" decoding="async">
+            <img src="/assets/img_transcribe_work_processes_2.png" alt="" width="669" height="400" loading="lazy" decoding="async">
+            <img src="/assets/img_transcribe_work_processes_3.png" alt="" width="669" height="400" loading="lazy" decoding="async">
+            <img
+              class="page-inner__solution-media-image--desktop"
+              src="/assets/img_transcribe_work_processes.png"
+              alt="Шаблоны и организация рабочих процессов в Figma"
+              width="1040"
+              height="207"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+
+          <div class="page-inner__solution-body">
+            <h3 class="page-inner__solution-title">Оптимизировал рабочие процессы</h3>
+
+            <ol class="page-inner__solution-list">
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">1</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Шаблон анализа задачи</p>
+                  <p class="page-inner__solution-item-text">
+                    Разработал шаблон анализа задачи, который ускорил этап подготовки и погружения в контекст, собрал все требования в одном документе и исключил их потерю.
+                  </p>
+                </div>
+              </li>
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">2</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Шаблон выполнения задачи по шагам</p>
+                  <p class="page-inner__solution-item-text">
+                    Разработал шаблон выполнения задачи по шагам (также реализовал плагин для Figma), который исключает пропуск этапов в дизайн-процессе и обеспечивает предсказуемость работы.
+                  </p>
+                </div>
+              </li>
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">3</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">Стандартизация файлов в Figma</p>
+                  <p class="page-inner__solution-item-text">
+                    Организовал структуру проекта, макетов, нейминг и навигацию для сокращения времени на поиск, создание дизайн-решений, передачу разработчикам и повышения качества консистентности.
+                  </p>
+                </div>
+              </li>
+              <li class="page-inner__solution-item">
+                <span class="page-inner__badge" aria-hidden="true">4</span>
+                <div class="page-inner__solution-content">
+                  <p class="page-inner__solution-item-title">База знаний о продукте</p>
+                  <p class="page-inner__solution-item-text">
+                    Подготовил руководство, чтобы новым сотрудникам было проще разобраться в продукте и включиться в дизайн-процесс. В нём систематизировал сценарии, особенности платформ, исследования и рабочие материалы.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </article>
+      </section>
+
+      <section class="page__container card page-inner__section page-inner__section--results" aria-labelledby="results-heading">
+        <h2 class="page-inner__section-heading" id="results-heading">Результат</h2>
+        <ul class="page-inner__results">
+          <li class="page-inner__result-card">
+            <img loading="lazy" class="page-inner__result-icon" src="/assets/icon_arrow_up_68.svg" alt="" width="68" height="68" aria-hidden="true">
+            <div class="page-inner__result-body">
+              <p class="page-inner__result-metric">на 35%</p>
+              <p class="page-inner__result-text">
+                <strong>увеличил количество подписок</strong>
+                и вывел новый канал оформления подписки на 1‑е место по конверсии.
+              </p>
+            </div>
+          </li>
+          <li class="page-inner__result-card">
+            <img loading="lazy" class="page-inner__result-icon" src="/assets/icon_arrow_up_68.svg" alt="" width="68" height="68" aria-hidden="true">
+            <div class="page-inner__result-body">
+              <p class="page-inner__result-metric">на 7%</p>
+              <p class="page-inner__result-text">
+                <strong>увеличил конверсию установок</strong>,
+                обновив визуальную концепцию скриншотов и подтвердив A/B‑тестами.
+              </p>
+            </div>
+          </li>
+          <li class="page-inner__result-card">
+            <img loading="lazy" class="page-inner__result-icon" src="/assets/icon_arrow_up_68.svg" alt="" width="68" height="68" aria-hidden="true">
+            <div class="page-inner__result-body">
+              <p class="page-inner__result-metric">в 1,5 раза</p>
+              <p class="page-inner__result-text">
+                <strong>ускорил проектирование</strong>
+                и обеспечил консистентность на всех платформах, спроектировав и внедрив дизайн‑систему.
+              </p>
+            </div>
+          </li>
+          <li class="page-inner__result-card">
+            <img loading="lazy" class="page-inner__result-icon" src="/assets/icon_arrow_down_68.svg" alt="" width="68" height="68" aria-hidden="true">
+            <div class="page-inner__result-body">
+              <p class="page-inner__result-metric">на 20%</p>
+              <p class="page-inner__result-text">
+                <strong>сократил время выполнения задач</strong>,
+                внедрив шаблоны и организацию файлов.
+              </p>
+            </div>
+          </li>
+          <li class="page-inner__result-card">
+            <img loading="lazy" class="page-inner__result-icon" src="/assets/icon_app_store_68.svg" alt="" width="68" height="68" aria-hidden="true">
+            <div class="page-inner__result-body">
+              <p class="page-inner__result-metric">4 млн</p>
+              <p class="page-inner__result-text">
+                <strong>установок</strong>
+                и 1,5 млн регистраций, достиг продукт, за период работы в нем.
+              </p>
+            </div>
+          </li>
+          <li class="page-inner__result-card">
+            <img loading="lazy" class="page-inner__result-icon" src="/assets/icon_awward_68.svg" alt="" width="68" height="68" aria-hidden="true">
+            <div class="page-inner__result-body">
+              <p class="page-inner__result-metric">App of the Day</p>
+              <p class="page-inner__result-text">
+                <strong>в 170 странах</strong>
+                неоднократно попадало в эту подборку
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    <nav class="page__container card case-navigation" aria-label="Навигация по кейсам">
+  <a class="interactive-card case-navigation__link" href="/gmoji-loyalty/">
+    <span class="case-navigation__direction">← Предыдущий кейс</span>
+    <h2 class="case-navigation__title">Программа лояльности Gmoji</h2>
+  </a>
+  <a class="interactive-card case-navigation__link" href="/transcribe-subscription/">
+    <span class="case-navigation__direction">Следующий кейс →</span>
+    <h2 class="case-navigation__title">Подписка и онбординг Transcribe</h2>
+  </a>
+</nav>
+</main>
+
+    <footer class="page__container card card--contact" aria-labelledby="contact-title">
+      <div class="contact__intro">
+        <h2 class="contact__title" id="contact-title">Давайте работать<br>вместе</h2>
+        <a class="btn-pill" href="/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Скачать резюме">
+          Резюме
+          <svg class="btn-pill__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.002 5C14.2671 5.00006 14.5215 5.10549 14.709 5.29297C14.8965 5.48049 15.002 5.73484 15.002 6V12.4453C15.0018 12.9973 14.554 13.4452 14.002 13.4453C13.4498 13.4453 13.0022 12.9974 13.002 12.4453V8.37891L6.70901 14.7051C6.31962 15.0965 5.6865 15.0981 5.29495 14.709C4.9035 14.3195 4.90175 13.6865 5.29104 13.2949L11.5537 7H7.87014C7.31786 7 6.87014 6.55228 6.87014 6C6.87014 5.44772 7.31786 5 7.87014 5H14.002Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+      <div class="contact__actions">
+        <button class="contact-card interactive-card contact-card--email-copy" type="button" data-email-copy data-email="sheyker.com@gmail.com" aria-label="Скопировать email sheyker.com@gmail.com">
+          <img class="contact-card__icon" src="/assets/icon_email_68.svg" alt="" aria-hidden="true">
+          <span class="contact-card__value contact-card__value--copy"><span>sheyker.com@gmail.com</span><span class="email-copy__icons" aria-hidden="true"><svg class="email-copy__copy" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9L16 9C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16L9 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><svg class="email-copy__check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg></span></span>
+        </button>
+        <a class="contact-card interactive-card" href="https://t.me/andrey_glukhov" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram @andrey_glukhov">
+          <img class="contact-card__icon" src="/assets/icon_telegram_68.svg" alt="" aria-hidden="true">
+          <span class="contact-card__value contact-card__value--external"><span>@andrey_glukhov</span><img class="contact-card__external-icon" src="/assets/icon_external_link_20.svg" alt="" aria-hidden="true"></span>
+        </a>
+      </div>
+    </footer>
+
+  </div>
+  <script src="/js/typography.js?v=transcribe-tabs-1"></script>
+  <script src="/js/reveal-cards.js?v=transcribe-tabs-1"></script>
+  <script src="/js/page-inner-list.js?v=transcribe-tabs-1"></script>
+  <script>
+    (function () {
+      var floatingHeader = document.querySelector("[data-mobile-floating-header]");
+      var mainHeader = document.querySelector(".header");
+      if (!floatingHeader || !mainHeader) return;
+
+      var mediaQuery = window.matchMedia("(max-width: 767.98px)");
+      var menuPanel = floatingHeader.querySelector(".mobile-header__menu");
+      var openButton = floatingHeader.querySelector(".mobile-header__menu-btn");
+      var closeButton = floatingHeader.querySelector(".mobile-header__close-btn");
+      var menuLinks = floatingHeader.querySelectorAll(".mobile-header__menu-link, .mobile-header__contact-link");
+      var lastScrollY = window.scrollY;
+      var menuCloseCleanupTimer = null;
+      var preserveFloatingHeaderAfterMenuClose = false;
+      var pageScrollY = 0;
+      var isPageScrollLocked = false;
+
+      function isMenuOpen() {
+        return floatingHeader.classList.contains("mobile-header--menu-open");
+      }
+
+      function isMainHeaderHidden() {
+        return mainHeader.getBoundingClientRect().bottom <= 0;
+      }
+
+      function isMainHeaderFullyVisible() {
+        var rect = mainHeader.getBoundingClientRect();
+        return rect.top >= 0 && rect.bottom <= window.innerHeight;
+      }
+
+      function lockPageScroll() {
+        if (isPageScrollLocked) return;
+        pageScrollY = window.scrollY;
+        document.body.style.position = "fixed";
+        document.body.style.top = "-" + pageScrollY + "px";
+        document.body.style.left = "0";
+        document.body.style.right = "0";
+        document.body.style.width = "100%";
+        document.body.style.overflow = "hidden";
+        isPageScrollLocked = true;
+      }
+
+      function unlockPageScroll() {
+        if (!isPageScrollLocked) return;
+        var root = document.documentElement;
+        var previousScrollBehavior = root.style.scrollBehavior;
+        root.style.scrollBehavior = "auto";
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.left = "";
+        document.body.style.right = "";
+        document.body.style.width = "";
+        document.body.style.overflow = "";
+        window.scrollTo(0, pageScrollY);
+        root.style.scrollBehavior = previousScrollBehavior;
+        isPageScrollLocked = false;
+      }
+
+      var lastMenuButtonRect = null;
+      var menuButtonTopOffset = 0;
+
+      function captureMenuButtonRect() {
+        if (!openButton) return;
+        lastMenuButtonRect = openButton.getBoundingClientRect();
+      }
+
+      function applyCloseButtonPosition(rect) {
+        if (!closeButton || !rect) return;
+        closeButton.style.top = rect.top + "px";
+        closeButton.style.left = rect.left + "px";
+        closeButton.style.right = "auto";
+        closeButton.style.bottom = "auto";
+      }
+
+      function syncCloseButtonPosition() {
+        if (!openButton || !lastMenuButtonRect) return;
+        var rect = openButton.getBoundingClientRect();
+        applyCloseButtonPosition({
+          top: rect.top + menuButtonTopOffset,
+          left: rect.left
+        });
+      }
+
+      function clearCloseButtonPosition() {
+        if (!closeButton) return;
+        lastMenuButtonRect = null;
+        menuButtonTopOffset = 0;
+        closeButton.style.top = "";
+        closeButton.style.left = "";
+        closeButton.style.right = "";
+        closeButton.style.bottom = "";
+      }
+
+      function openMenu(event) {
+        if (event && event.currentTarget) openButton = event.currentTarget;
+        if (!menuPanel || !openButton) return;
+        if (menuCloseCleanupTimer) {
+          window.clearTimeout(menuCloseCleanupTimer);
+          menuCloseCleanupTimer = null;
+        }
+        floatingHeader.classList.remove("mobile-header--menu-closing");
+        captureMenuButtonRect();
+        applyCloseButtonPosition(lastMenuButtonRect);
+        menuPanel.hidden = false;
+        floatingHeader.classList.add("mobile-header--menu-open");
+        openButton.setAttribute("aria-expanded", "true");
+        menuPanel.scrollTop = 0;
+        lockPageScroll();
+        menuButtonTopOffset = lastMenuButtonRect.top - openButton.getBoundingClientRect().top;
+        requestAnimationFrame(function () {
+          if (!isMenuOpen()) return;
+          syncCloseButtonPosition();
+          if (closeButton) closeButton.focus({ preventScroll: true });
+        });
+      }
+
+      function closeMenu() {
+        if (!menuPanel || !openButton) return;
+        var wasMenuOpen = isMenuOpen();
+        var shouldShowFloatingHeader = isMainHeaderHidden();
+        menuPanel.hidden = true;
+        clearCloseButtonPosition();
+        floatingHeader.classList.add("mobile-header--menu-closing");
+        floatingHeader.classList.remove("mobile-header--menu-open");
+        floatingHeader.classList.toggle("mobile-header--visible", shouldShowFloatingHeader);
+        openButton.setAttribute("aria-expanded", "false");
+        unlockPageScroll();
+        if (wasMenuOpen) {
+          var focusTarget = mediaQuery.matches ? openButton : mainHeader.querySelector("a, button");
+          if (focusTarget) focusTarget.focus({ preventScroll: true });
+        }
+        preserveFloatingHeaderAfterMenuClose = shouldShowFloatingHeader;
+        if (menuCloseCleanupTimer) window.clearTimeout(menuCloseCleanupTimer);
+        menuCloseCleanupTimer = window.setTimeout(function () {
+          floatingHeader.classList.remove("mobile-header--menu-closing");
+          menuCloseCleanupTimer = null;
+        }, 220);
+      }
+
+      function hideFloatingHeader() {
+        floatingHeader.classList.remove("mobile-header--visible");
+        closeMenu();
+      }
+
+      function updateHeaderState() {
+        if (!mediaQuery.matches) {
+          hideFloatingHeader();
+          return;
+        }
+        if (isMenuOpen()) return;
+
+        var currentScrollY = window.scrollY;
+        var scrollDelta = currentScrollY - lastScrollY;
+        var scrollingUp = scrollDelta < -2;
+        var scrollingDown = scrollDelta > 2;
+        var headerHidden = isMainHeaderHidden();
+        var headerVisible = isMainHeaderFullyVisible();
+
+        if (preserveFloatingHeaderAfterMenuClose) {
+          floatingHeader.classList.add("mobile-header--visible");
+          preserveFloatingHeaderAfterMenuClose = false;
+          lastScrollY = currentScrollY;
+          return;
+        }
+
+        if (headerVisible || scrollingDown || !headerHidden) {
+          floatingHeader.classList.remove("mobile-header--visible");
+          if (headerVisible) closeMenu();
+        } else if (scrollingUp && headerHidden) {
+          floatingHeader.classList.add("mobile-header--visible");
+        }
+
+        lastScrollY = currentScrollY;
+      }
+
+      if (openButton) openButton.addEventListener("click", openMenu);
+      var mainMenuButton = mainHeader.querySelector(".header__menu-btn");
+      if (mainMenuButton) mainMenuButton.addEventListener("click", openMenu);
+      if (closeButton) closeButton.addEventListener("click", closeMenu);
+      menuLinks.forEach(function (link) {
+        if (!link.matches(".email-copy, [data-email-copy]")) {
+          link.addEventListener("click", closeMenu);
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (!isMenuOpen()) return;
+        if (event.key === "Escape") {
+          event.preventDefault();
+          closeMenu();
+          return;
+        }
+        if (event.key !== "Tab") return;
+        var focusable = Array.prototype.slice.call(
+          menuPanel.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+        ).filter(function (element) {
+          return element.getClientRects().length && window.getComputedStyle(element).visibility !== "hidden";
+        });
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (!first) {
+          event.preventDefault();
+          return;
+        }
+        var focusOutsideMenu = !menuPanel.contains(document.activeElement);
+        if (event.shiftKey && (document.activeElement === first || focusOutsideMenu)) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || focusOutsideMenu)) {
+          event.preventDefault();
+          first.focus({ preventScroll: true });
+        }
+      });
+
+      window.addEventListener("scroll", updateHeaderState, { passive: true });
+      window.addEventListener("resize", function () {
+        updateHeaderState();
+        if (floatingHeader.classList.contains("mobile-header--menu-open")) {
+          syncCloseButtonPosition();
+        }
+      });
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", function () {
+          if (floatingHeader.classList.contains("mobile-header--menu-open")) {
+            syncCloseButtonPosition();
+          }
+        });
+      }
+      updateHeaderState();
+    })();
+  </script>
+  <script src="/js/email-copy.js?v=4"></script>
+  <script src="/js/contact-card-press.js?v=1"></script>
+  <script src="/js/gallery.js?v=transcribe-tabs-1" defer></script>
+  <script src="/js/case-navigation-press.js?v=transcribe-tabs-1"></script>
+</body>
+</html>
